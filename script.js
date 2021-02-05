@@ -39,8 +39,17 @@ function readOperator() {
 
   //selecting different calculations depending on a variable (if-statements – or switch-case)
   if (inputVal == "add") {
-    result == inputVal();
+    result == "firstnumber" + "secondnumber";
+  } else if (inputVal == "sub") {
+    result == "firstnumber" - "secondnumber";
+  } else if (inputVal == "mul") {
+    result == "firstnumber" * "secondnumber";
+  } else {
+    result == "firstnumber" / "secondnumber";
   }
+
+  const output = document.getElementById("result");
+  output.value = result;
 
   checkResultRounded();
 }
