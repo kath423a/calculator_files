@@ -16,7 +16,7 @@ function clickCalculate() {
 }
 
 function readFirstNumber() {
-  var inputVal = document.getElementById("firstnumber").value;
+  const inputVal = document.getElementById("firstnumber").value;
 
   console.log(inputVal);
 
@@ -24,7 +24,7 @@ function readFirstNumber() {
 }
 
 function readSecondNumber() {
-  var inputVal = document.getElementById("secondnumber").value;
+  const inputVal = document.getElementById("secondnumber").value;
 
   console.log(inputVal);
 
@@ -32,7 +32,15 @@ function readSecondNumber() {
 }
 
 function readOperator() {
-  //Add, subtract, multiply or divide
+  //Read the operator, either: Add, subtract, multiply or divide
+  const inputVal = document.getElementById("operator").value;
+
+  let result;
+
+  //selecting different calculations depending on a variable (if-statements – or switch-case)
+  if (inputVal == "add") {
+    result == inputVal();
+  }
 
   checkResultRounded();
 }
