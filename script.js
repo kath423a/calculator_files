@@ -16,10 +16,18 @@ function clickCalculate() {
 }
 
 function readFirstNumber() {
+  var inputVal = document.getElementById("firstnumber").value;
+
+  console.log(inputVal);
+
   readSecondNumber();
 }
 
 function readSecondNumber() {
+  var inputVal = document.getElementById("secondnumber").value;
+
+  console.log(inputVal);
+
   readOperator();
 }
 
