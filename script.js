@@ -8,6 +8,10 @@ function sidenVises() {
 }
 
 function clickCalculate() {
+  document
+    .querySelector("#calculate")
+    .addEventListener("click", readFirstNumber);
+
   readFirstNumber();
 }
 
@@ -19,4 +23,12 @@ function readSecondNumber() {
   readOperator();
 }
 
-function readOperator() {}
+function readOperator() {
+  //Add, subtract, multiply or divide
+
+  checkResultRounded();
+}
+
+function checkResultRounded() {
+  // Do rounding else write result into firstnumber field
+}
