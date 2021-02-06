@@ -33,20 +33,12 @@ function readSecondNumber() {
 
 function readOperator() {
   //Read the operator, either: Add, subtract, multiply or divide
-  const inputVal = document.getElementById("operator").value;
-
-  let result;
+  const operatorInput = document.querySelector('#operator');
+console.log("Operator value: " + operatorInput.value");
+  
 
   //selecting different calculations depending on a variable (if-statements – or switch-case)
-  if (inputVal == "add") {
-    result == "firstnumber" + "secondnumber";
-  } else if (inputVal == "sub") {
-    result == "firstnumber" - "secondnumber";
-  } else if (inputVal == "mul") {
-    result == "firstnumber" * "secondnumber";
-  } else {
-    result == "firstnumber" / "secondnumber";
-  }
+  if (operatorInput.value === "add")
 
   const output = document.getElementById("result");
   output.value = result;
