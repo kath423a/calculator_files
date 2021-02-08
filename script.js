@@ -31,9 +31,9 @@ function readFirstNumber() {
 }
 
 function readSecondNumber() {
-  sencondNumber = document.getElementById("secondnumber").value;
+  secondNumber = document.getElementById("secondnumber").value;
 
-  console.log(sencondNumber);
+  console.log(secondNumber);
 
   readOperator();
 }
@@ -41,14 +41,13 @@ function readSecondNumber() {
 function readOperator() {
   //Read the operator, either: Add, subtract, multiply or divide
   operatorInput = document.querySelector("#operator");
-  console.log("Operator value: " + operatorInput.value);
+  console.log("Operator value: " + operatorInput);
 
   //selecting different calculations depending on a variable (if-statements – or switch-case)
-  if (operatorInput.value === "add") {
-    const output = document.getElementById("results");
-    console.log(result);
+  if (operatorInput === "add") {
+    const output = document.querrySelector("#firstnumber");
+    output = result;
   }
-
   checkResultRounded();
 }
 
