@@ -6,6 +6,7 @@ let firstNumber;
 let sencondNumber;
 let operatorInput;
 let output;
+let result;
 
 function sidenVises() {
   console.log("sidenVises");
@@ -44,8 +45,8 @@ function readOperator() {
 
   //selecting different calculations depending on a variable (if-statements – or switch-case)
   if (operatorInput.value === "add") {
-    output = document.getElementById("result");
-    output.value = result;
+    const output = document.getElementById("results");
+    console.log(result);
   }
 
   checkResultRounded();
