@@ -1,6 +1,12 @@
 //Eventlistener som sætter spillet i gang når siden er loadet
 window.addEventListener("load", sidenVises);
 
+//Variabler
+let firstNumber;
+let sencondNumber;
+let operatorInput;
+let output;
+
 function sidenVises() {
   console.log("sidenVises");
 
@@ -14,10 +20,6 @@ function clickCalculate() {
 
   readFirstNumber();
 }
-
-//De to variabler
-let firstNumber;
-let sencondNumber;
 
 function readFirstNumber() {
   firstNumber = document.getElementById("firstnumber").value;
@@ -37,13 +39,14 @@ function readSecondNumber() {
 
 function readOperator() {
   //Read the operator, either: Add, subtract, multiply or divide
-  const operatorInput = document.querySelector("#operator");
+  operatorInput = document.querySelector("#operator");
   console.log("Operator value: " + operatorInput.value);
 
   //selecting different calculations depending on a variable (if-statements – or switch-case)
-  if (operatorInput.value === "add")
-    const output = document.getElementById("result");
-  output.value = result;
+  if (operatorInput.value === "add") {
+    output = document.getElementById("result");
+    output.value = result;
+  }
 
   checkResultRounded();
 }
