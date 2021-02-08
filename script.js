@@ -15,32 +15,34 @@ function clickCalculate() {
   readFirstNumber();
 }
 
-function readFirstNumber() {
-  const inputVal = document.getElementById("firstnumber").value;
+//De to variabler
+let firstNumber;
+let sencondNumber;
 
-  console.log(inputVal);
+function readFirstNumber() {
+  firstNumber = document.getElementById("firstnumber").value;
+
+  console.log(firstNumber);
 
   readSecondNumber();
 }
 
 function readSecondNumber() {
-  const inputVal = document.getElementById("secondnumber").value;
+  sencondNumber = document.getElementById("secondnumber").value;
 
-  console.log(inputVal);
+  console.log(sencondNumber);
 
   readOperator();
 }
 
 function readOperator() {
   //Read the operator, either: Add, subtract, multiply or divide
-  const operatorInput = document.querySelector('#operator');
-console.log("Operator value: " + operatorInput.value");
-  
+  const operatorInput = document.querySelector("#operator");
+  console.log("Operator value: " + operatorInput.value);
 
   //selecting different calculations depending on a variable (if-statements – or switch-case)
   if (operatorInput.value === "add")
-
-  const output = document.getElementById("result");
+    const output = document.getElementById("result");
   output.value = result;
 
   checkResultRounded();
