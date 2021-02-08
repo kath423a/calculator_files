@@ -41,13 +41,22 @@ function readSecondNumber() {
 function readOperator() {
   //Read the operator, either: Add, subtract, multiply or divide
   operatorInput = document.querySelector("#operator");
-  console.log("Operator value: " + operatorInput);
+  console.log("Operator value: " + operatorInput.value);
 
-  //selecting different calculations depending on a variable (if-statements – or switch-case)
+  //Selecting different calculations depending on a variable (if-statements – or switch-case)
   if (operatorInput === "add") {
-    const output = document.querrySelector("#firstnumber");
-    output = result;
+    result = firstNumber + secondNumber;
+  } else if (operatorInput === "sub") {
+    result = firstNumber - secondNumber;
+  } else if (operatorInput === "mul") {
+    result = firstNumber * secondNumber;
+  } else if (operatorInput === "div") {
+    result = firstNumber / secondNumber;
   }
+
+  document.querySelector("#results").innerHTML = `${result}`;
+  console.log("Resultat: " + result);
+
   checkResultRounded();
 }
 
